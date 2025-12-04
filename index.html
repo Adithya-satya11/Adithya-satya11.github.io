@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Adithya Vardhan Reddy | Cybersecurity Analyst</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #111625;
+            --text-main: #ccd6f6;
+            --text-secondary: #8892b0;
+            --accent: #64ffda; /* Cyan/Green hacker accent */
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(11, 15, 25, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #1f293a;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 100px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 100px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--text-main);
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 200px;
+            height: 1px;
+            background-color: #233554;
+            margin-left: 20px;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .skill-list li {
+            list-style: none;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-list li::before {
+            content: "▹";
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        /* Experience & Projects Cards */
+        .card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+
+        .card-subtitle {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .card-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        .tags {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-family: monospace;
+        }
+
+        /* Certifications List */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Contact/Footer */
+        footer {
+            text-align: center;
+            padding: 50px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .social-icons a {
+            color: var(--text-main);
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero, section, nav {
+                padding: 20px 25px;
+            }
+            .hero h1 { font-size: 2.5rem; }
+            .hero h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">V. Adithya</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <p style="color: var(--accent);">Hi, my name is</p>
+        <h1>V Adithya Vardhan Reddy.</h1>
+        <h2>I secure systems & analyze threats.</h2>
+        <p>
+            I am a Cybersecurity Graduate and Penetration Tester with hands-on experience in SOC monitoring, vulnerability assessment, and ethical hacking. 
+            Ranked Top 1% on TryHackMe with a passion for offensive and defensive security.
+        </p>
+        <br>
+        <a href="#contact" class="btn">Get In Touch</a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div style="max-width: 800px;">
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                I am a motivated Cybersecurity graduate (B.Tech) from Vignana Bharathi Institute of Technology. 
+                My focus is on identifying vulnerabilities, analyzing threats, and supporting secure system architecture.
+            </p>
+            <p style="color: var(--text-secondary);">
+                I have been recognized on platforms like <strong>TryHackMe (Top 1%)</strong>, OverTheWire, and HackTheBox. 
+                I am currently seeking a challenging role as a Security Analyst to contribute to a secure IT environment.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Security Tools</h3>
+                <ul class="skill-list">
+                    <li>Burp Suite & Nmap</li>
+                    <li>Metasploit & Wireshark</li>
+                    <li>Splunk & Elastic Security</li>
+                    <li>CrowdStrike Falcon & Wazuh</li>
+                    <li>Hydra & Nikto</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Concepts</h3>
+                <ul class="skill-list">
+                    <li>Penetration Testing</li>
+                    <li>SOC Monitoring & SIEM</li>
+                    <li>MITRE ATT&CK & CIA Triad</li>
+                    <li>Incident Response</li>
+                    <li>TCP/IP & OSI Model</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Languages & OS</h3>
+                <ul class="skill-list">
+                    <li>Python & C</li>
+                    <li>Bash & PowerShell</li>
+                    <li>SQL & HTML</li>
+                    <li>Linux (Kali/Parrot)</li>
+                    <li>Windows & Active Directory</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">SOC Analyst Intern</span>
+                <span class="card-subtitle">FUNZIPPY | 4 Months</span>
+            </div>
+            <div class="card-desc">
+                <ul>
+                    <li>Monitored, detected, and responded to security incidents in a simulated SOC environment.</li>
+                    <li>Investigated root causes of incidents and proposed remediation measures.</li>
+                    <li>Utilized SIEM tools and EDR platforms to enhance detection and analysis capabilities.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects & CTFs</h2>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">Location Tracking using Seeker</span>
+                <a href="#" class="card-subtitle">View Details</a>
+            </div>
+            <div class="card-desc">
+                Built a phishing site simulation to demonstrate geolocation data risks.
+            </div>
+            <div class="tags">
+                <span class="tag">Seeker</span>
+                <span class="tag">Ngrok</span>
+                <span class="tag">Social Engineering</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">WPA/WPA2 Attack Simulation</span>
+                <a href="#" class="card-subtitle">View Details</a>
+            </div>
+            <div class="card-desc">
+                Simulated a DOS attack on a router and cloned an access point to capture credentials for security testing.
+            </div>
+            <div class="tags">
+                <span class="tag">Airgeddon</span>
+                <span class="tag">Airmon-ng</span>
+                <span class="tag">SEToolkit</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">eJPT CTF Report</span>
+                <a href="#" class="card-subtitle">Read Report</a>
+            </div>
+            <div class="card-desc">
+                Comprehensive report on Host & Network Penetration Testing: System-Host Based Attacks created during eJPT certification journey.
+            </div>
+            <div class="tags">
+                <span class="tag">Documentation</span>
+                <span class="tag">PenTesting</span>
+                <span class="tag">Reporting</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-grid">
+            <div class="card">
+                <div class="card-title">Jr Penetration Tester</div>
+                <div class="card-subtitle">TryHackMe</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Ethical Hacking</div>
+                <div class="card-subtitle">Cisco Networking Academy</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Cybersecurity Analyst</div>
+                <div class="card-subtitle">Tata Strive</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Cloud Security</div>
+                <div class="card-subtitle">Simplilearn</div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2 style="color: var(--text-main); margin-bottom: 20px;">Get In Touch</h2>
+        <p>I am currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open.</p>
+        <br>
+        <a href="mailto:iadithyavardhanreddy@gmail.com" class="btn">Say Hello</a>
+        <br><br>
+        <div class="social-icons">
+            <a href="https://github.com/Adithya-satya11" target="_blank">GitHub</a>
+            <a href="www.linkedin.com/in/adithyareddyv" target="_blank">LinkedIn</a>
+            </div>
+        <br>
+        <p>Designed & Built by V Adithya Vardhan Reddy</p>
+    </footer>
+
+</body>
+</html>
